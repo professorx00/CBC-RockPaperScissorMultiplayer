@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissor Multiplayer</title>
+    <!-- CSS Links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container fullFrame">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h3 class="hide" id="titlePO">Player 1</h3>
+                <h3 id="loginTitlePO">Login Player 1</h3>
+            </div>
+            <div class="col-md-6">
+                <h3 class="hide" id="titlePT">Player 2</h3>
+                <h3 id="loginTitlePO">Login Player 2</h3>
+            </div>
+        </div>
+        <div class="row text-center" id="playerNames">
+            <div class="col-md-6" id="grabPO">
+                <form id="formPO">
+                    <input type="text" id="infoPO" />
+                    <button type="button" id="infoPObtn">Submit Name</button>
+                </form>
+            </div>
+            <div class="col-md-6 hide" id="namePOcontainer">
+                <h1>Name: <span id="namePO">$player 1</span> </h1>
+            </div>
+            <div class="col-md-6" id="grabPT">
+                    <form id="formPT">
+                        <input type="text" id="infoPT" />
+                        <button type="button" id="infoPTbtn">Submit Name</button>
+                    </form>
+            </div>
+            <div class="col-md-6 hide" id="namePTcontainer">
+                <h1>Name: <span id="namePT">$player 2</span> </h1>
+            </div>
+        </div>
+        <div class="row" id="playerButtons">
+            <div class="col-md-6 border hide" id="buttonsPO">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="rockPO">ROCK</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="paperPO">PAPER</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="scissorPO">SCISSOR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 border hide" id="buttonsPT">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="rockPT">ROCK</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="paperPT">PAPER</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark fullWidth" id="scissorPT">SCISSOR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border fullFrame" id="resultsPO">
+                
+            </div>
+            <div class="col-md-6 border fullFrame" id="resultsPT">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>
